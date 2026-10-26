@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 0 1rem; line-height: 1.6; }
+    nav { display: flex; gap: 1.5rem; padding: 1rem 0; border-bottom: 2px solid #ddd; margin-bottom: 2rem; }
+    nav a { text-decoration: none; font-weight: 600; color: #333; }
+    nav a:hover { color: #e6a800; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/champions' | relative_url }}">Champions</a>
+    <a href="{{ '/rules' | relative_url }}">Rules</a>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
