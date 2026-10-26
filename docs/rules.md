@@ -1,3 +1,8 @@
+---
+   title: Rules
+   layout: default
+---
+
 # Rules
 
 ## League Format

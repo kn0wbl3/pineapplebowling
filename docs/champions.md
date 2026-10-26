@@ -1,3 +1,8 @@
+---
+   title: Champions
+   layout: default
+---
+
 # The Hall of Champions
 
 ## 2026 - The Bowling Bandits
