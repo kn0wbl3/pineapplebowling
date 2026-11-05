@@ -5,6 +5,8 @@ plugins:
 title: Pineapple League
 author: Pineapple League
 title-on-all-pages: true
+site-css:
+  - "/assets/css/side-images.css"
 
 navbar-links:
   Champions: "champions"
