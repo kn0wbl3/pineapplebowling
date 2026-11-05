@@ -6,7 +6,7 @@
 ## League Format
 * 3 games per night
 * Season length: 15 weeks
-* Handicap: 80% of 200
+* Handicap: 90% of 200
 
 ## Averages and Handicaps
 
@@ -18,27 +18,29 @@
 
 ### New Bowlers / Subs
 
-* Use the data-driven league default for the first night. The calculations behind the data-driven average can be found [here](https://docs.google.com/spreadsheets/d/1ti03wcSodtk3AMxo7bAVIccoArATbtHJ2YBGTQGV29c/edit?usp=drive_link)
+A new bowler or substitute with a blank or "0" entering average will establish an average on the first night of bowling.
 
 <div class="box-warning" markdown="1">
 
-**Default starting averages**
+**No entering average**
 
-| Bowler | Male | Female |
-|---|---|---|
-| New Bowlers | 131 | 102 |
-| Subs | 136 | 107 |
+| Games | Average used |
+|---|---|
+| First night (games 1-3) | Your average from these 3 games, counted retroactively |
+| Second night (games 4-6) | The same average, frozen |
+| After 6 games | Your average is updated |
 
 </div>
 
+If you do have an entering average:
+
+* Your handicap is based on your entering average until re-establishment
 * Your average is re-established after your first 3 games
-* Handicap applies based on entering average until re-establishment
-* If a new bowler / sub knows their average, that will be their default until 3 games have been bowled
 
 ## Quick Summary
 * Returning Bowlers: last season's final average, re-establish average after 6 games
-* New Bowlers: new bowler default average or known average, re-establish average after 3 games
-* Subs: sub default average or known average, re-establish average after 3 games
+* New Bowlers / Subs with no entering average: average set on the first night, frozen for the second night, updated after 6 games
+* New Bowlers / Subs with an entering average: entering average, re-establish average after 3 games
 
 ## Scoring
 
