@@ -1,9 +1,7 @@
 ---
    title: Rules
-   layout: default
+   layout: page
 ---
-
-# Rules
 
 ## League Format
 * 3 games per night

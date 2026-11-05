@@ -1,9 +1,7 @@
 ---
-   title: Champions
-   layout: default
+   title: The Hall of Champions
+   layout: page
 ---
-
-# The Hall of Champions
 
 ## 2026 - The Bowling Bandits
 Will Gazzetta, Barrett Gumina, Angie Ryan, Mike Rodgers
