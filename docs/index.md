@@ -1,6 +1,4 @@
 ---
-   title: Index
-   layout: default
+   title: Welcome to the Pineapple League!
+   layout: page
 ---
-
-# Welcome to the Pineapple League!

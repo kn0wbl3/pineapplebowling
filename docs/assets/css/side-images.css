@@ -1,0 +1,29 @@
+/* Decorative photos in the page margins. Below 1200px the text column
+   takes up the margins, so the photos are hidden. */
+@media (min-width: 1200px) {
+  body::before,
+  body::after {
+    --side-width: min(260px, calc(50vw - 380px - 3rem));
+    content: "";
+    position: fixed;
+    top: 8rem;
+    z-index: -1;
+    width: var(--side-width);
+    height: calc(var(--side-width) * 1.4);
+    background-size: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  body::before {
+    left: calc((50vw - 380px - var(--side-width)) / 2);
+    background-image: url("../img/bowling-lane.jpg");
+    background-position: 75% center;
+  }
+
+  body::after {
+    right: calc((50vw - 380px - var(--side-width)) / 2);
+    background-image: url("../img/bowling-balls.jpg");
+    background-position: 25% center;
+  }
+}

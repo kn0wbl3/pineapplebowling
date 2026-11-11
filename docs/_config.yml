@@ -1,2 +1,14 @@
-   theme: jekyll-theme-minimal
-   title: My Site
+remote_theme: daattali/beautiful-jekyll@6.0.1
+plugins:
+  - jekyll-remote-theme
+
+title: Pineapple League
+author: Pineapple League
+title-on-all-pages: true
+site-css:
+  - "/assets/css/side-images.css"
+
+navbar-links:
+  Champions: "champions"
+  Rules: "rules"
+  Photos: "https://photos.app.goo.gl/Rqi1C8HQAum8Nrei8"
