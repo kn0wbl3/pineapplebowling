@@ -1,0 +1,10 @@
+# Netlify is used only for PR deploy previews. GitHub Pages serves the
+# live site at pineapplebowling.com.
+[build]
+  command = "bundle exec jekyll build --source docs --destination _site"
+  publish = "_site"
+
+[build.environment]
+  RUBY_VERSION = "3.3.6"
+  # The github-pages gem needs the repo name to fill in site metadata.
+  PAGES_REPO_NWO = "kn0wbl3/pineapplebowling"
