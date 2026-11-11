@@ -18,7 +18,7 @@ There is no lint or test tooling. Jekyll and Ruby are not installed in the dev e
 
 ## Netlify PR previews
 
-- Netlify builds a deploy preview for each PR; GitHub Pages stays the live site. Netlify's own production deploy goes to a `*.netlify.app` URL only, and no custom domain is set on Netlify.
+- Netlify builds a deploy preview for each PR; GitHub Pages stays the live site. The Netlify site is `prismatic-moonbeam-5fe576`; previews are at `https://deploy-preview-<PR#>--prismatic-moonbeam-5fe576.netlify.app`. They are behind Netlify's visitor-access protection, so `curl` gets a 401 and the user must open them while logged in. Netlify's own production deploy goes to a `*.netlify.app` URL only, and no custom domain is set on Netlify.
 - `netlify.toml` and `Gemfile` sit at the repo root, outside `docs/`, so GitHub Pages ignores them. The `Gemfile` uses the `github-pages` gem so previews use the same Jekyll version and plugins as the live site.
 - The build runs `bundle exec jekyll build --source docs --destination _site`. `PAGES_REPO_NWO` is set in `netlify.toml` because the `github-pages` gem's metadata plugin fails without a repo name.
 
@@ -35,5 +35,5 @@ There is no lint or test tooling. Jekyll and Ruby are not installed in the dev e
 
 ## TODO
 
-- Tick "Enforce HTTPS" in the Pages settings once GitHub issues the certificate for `pineapplebowling.com` (as of 2026-11-10, HTTP works but HTTPS still serves the `*.github.io` certificate).
-- Finish Netlify setup: connect the repo in Netlify and confirm the first deploy preview builds.
+- Get HTTPS working on `pineapplebowling.com`. As of 2026-11-10, DNS is verified correct (all four Squarespace nameservers and the public resolvers return the GitHub records, DNSSEC validates, no CAA records) and HTTP is served by GitHub, but the Pages settings still show "DNS check unsuccessful" (NotServedByPagesError), even after removing and re-adding the domain. The likely cause is GitHub caching the old Squarespace forwarding A record (`198.49.23.145`, 4-hour TTL). Next: click "Check again" in the Pages settings; once green and the certificate is issued, tick "Enforce HTTPS". If it is still failing after about 24 hours, remove and re-add the domain once more, then contact GitHub Support.
+- Removing and re-adding the domain makes GitHub commit "Delete CNAME" and "Create CNAME" to `main`, so pull before committing locally.
