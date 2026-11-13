@@ -5,8 +5,8 @@
 
 ## League Format
 * 3 games per night
-* Season length: 15 weeks
-* Handicap: 90% of 200
+* Season length: 15 weeks (January 6th - April 28th)
+* Handicap: 90% of 200: [what does this mean?]
 
 ## Averages and Handicaps
 
