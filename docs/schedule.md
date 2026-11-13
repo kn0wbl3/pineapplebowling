@@ -19,8 +19,8 @@ We bowl **Wednesdays at 6:30 PM** at [Bowlero White Plains](https://www.google.c
 | 9 | Wed, Mar 10 | |
 | 10 | Wed, Mar 17 | |
 | | Wed, Mar 24 | *No bowling* |
-| 11 | Wed, Mar 31 | |
-| 12 | Wed, Apr 7 | **Position night** |
+| 11 | Wed, Mar 31 | **Position night** |
+| 12 | Wed, Apr 7 | |
 | 13 | Wed, Apr 14 | |
 | 14 | Wed, Apr 21 | **Position night** |
 | 15 | Wed, Apr 28 | **Position night**, last night of the season |

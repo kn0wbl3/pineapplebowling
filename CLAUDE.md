@@ -38,5 +38,6 @@ Do not commit to `main` directly. Branch from `main`, push the branch, and open 
 - `docs/assets/css/side-images.css` shows the two photos in `docs/assets/img/` in the page margins on screens at least 1200px wide. To swap a photo, replace the file and keep its filename.
 - Callouts use the theme's box classes with Markdown enabled inside: `<div class="box-warning" markdown="1">`.
 - The theme has no favicon setting. `defaults` in `_config.yml` gives every page `head-extra: [favicon.html]`, which pulls in `docs/_includes/favicon.html`, plus a site-wide `share-img` and `share-description` for link previews. A page can override either in its front matter.
+- `docs/assets/js/external-links.js`, loaded through `site-js` in `_config.yml`, makes every link to another site open in a new tab, including the Standings and Photos nav links.
 - `docs/schedule.md` holds the season's dates, off weeks and position nights, and `docs/index.md` repeats the night, time, place and season dates. Update both each season.
 - `docs/champions.md` lists winners newest first, with a `## <year> - <team>` heading followed by the roster.

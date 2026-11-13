@@ -8,6 +8,8 @@ title-on-all-pages: true
 url: "https://pineapplebowling.com"
 site-css:
   - "/assets/css/side-images.css"
+site-js:
+  - "/assets/js/external-links.js"
 
 navbar-links:
   Schedule: "schedule"
