@@ -37,8 +37,6 @@ Do not commit to `main` directly. Branch from `main`, push the branch, and open 
 - To add a page to the nav, add it under `navbar-links` in `_config.yml`.
 - `docs/assets/css/side-images.css` shows the two photos in `docs/assets/img/` in the page margins on screens at least 1200px wide. To swap a photo, replace the file and keep its filename.
 - Callouts use the theme's box classes with Markdown enabled inside: `<div class="box-warning" markdown="1">`.
+- The theme has no favicon setting. `defaults` in `_config.yml` gives every page `head-extra: [favicon.html]`, which pulls in `docs/_includes/favicon.html`, plus a site-wide `share-img` and `share-description` for link previews. A page can override either in its front matter.
+- `docs/schedule.md` holds the season's dates, off weeks and position nights, and `docs/index.md` repeats the night, time, place and season dates. Update both each season.
 - `docs/champions.md` lists winners newest first, with a `## <year> - <team>` heading followed by the roster.
-
-## TODO
-
-- Tick "Enforce HTTPS" in the Pages settings once GitHub issues the certificate for `pineapplebowling.com` (as of 2026-11-10, HTTP works but HTTPS still serves the `*.github.io` certificate).

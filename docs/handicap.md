@@ -22,6 +22,8 @@ The league handicap is **90% of 200**. That means:
 
 Your average also drops its fractions. An average of 152.5 counts as 152.
 
+If your average is 200 or higher, your handicap is 0.
+
 ## Example
 
 Your average is 150.
@@ -48,7 +50,7 @@ If you bowl a 160, your score for that game is 160 + 45 = **205**.
 | 170 | 27 |
 | 180 | 18 |
 | 190 | 9 |
-| 200 | 0 |
+| 200 or higher | 0 |
 
 ## How Handicap Affects Scoring
 
