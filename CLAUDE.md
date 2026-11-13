@@ -17,7 +17,7 @@ Website for the Pineapple League, a bowling league. It is a Jekyll site built an
 There is no lint or test tooling. Jekyll and Ruby are not installed in the dev environment, and neither is `gh`, so PRs are opened from the GitHub website. Do not try to build or serve the site locally.
 
 - Check a change on the Netlify deploy preview for its PR. Previews are built only for PRs.
-- After merging, confirm what is live with `curl -s https://pineapplebowling.com/<page>`. The theme's HTML includes a `Beautiful Jekyll <version>` comment.
+- After merging, Pages takes about a minute to deploy; until then new pages return 404. Confirm what is live with `curl -s https://pineapplebowling.com/<page>`. The theme's HTML includes a `Beautiful Jekyll <version>` comment.
 
 ## Branch workflow
 
@@ -34,10 +34,25 @@ Do not commit to `main` directly. Branch from `main`, push the branch, and open 
 - All site content lives in `docs/`, the Pages source. Files outside it are not published.
 - `docs/_config.yml` sets the remote theme (Beautiful Jekyll, pinned to 6.0.1), site title, navbar links, and custom stylesheets. The theme's own `_config.yml` is not applied to remote themes, so any theme setting must be added here.
 - Each page is a Markdown file with `title` and `layout: page` front matter. The theme renders `title` as the page header, so pages should not start with a `#` heading.
-- To add a page to the nav, add it under `navbar-links` in `_config.yml`.
+- To add a page to the nav, add it under `navbar-links` in `_config.yml`. Nav entries can also be external URLs (Standings and Photos are).
 - `docs/assets/css/side-images.css` shows the two photos in `docs/assets/img/` in the page margins on screens at least 1200px wide. To swap a photo, replace the file and keep its filename.
-- Callouts use the theme's box classes with Markdown enabled inside: `<div class="box-warning" markdown="1">`.
+- Callouts use the theme's box classes with Markdown enabled inside: `<div class="box-warning" markdown="1">` (or `box-note`).
 - The theme has no favicon setting. `defaults` in `_config.yml` gives every page `head-extra: [favicon.html]`, which pulls in `docs/_includes/favicon.html`, plus a site-wide `share-img` and `share-description` for link previews. A page can override either in its front matter.
 - `docs/assets/js/external-links.js`, loaded through `site-js` in `_config.yml`, makes every link to another site open in a new tab, including the Standings and Photos nav links.
-- `docs/schedule.md` holds the season's dates, off weeks and position nights, and `docs/index.md` repeats the night, time, place and season dates. Update both each season.
+- `docs/champions.md` and `docs/rules.md` use CRLF line endings; the other pages use LF. A `sed` pattern anchored with `$` will silently miss lines in the CRLF files.
+
+## Content
+
+- League facts: Wednesdays at 6:30 PM at Bowlero White Plains. Handicap is 90% of 200.
+- `docs/rules.md` covers league format, averages, worked examples and scoring. Its handicap line links to `docs/handicap.md`, which explains the formula. The handicap page is deliberately left out of the nav.
+- Handicap math, used by the examples on both pages: (200 − average) × 0.9 with fractions dropped, and averages also drop fractions. Averages of 200 or higher get a handicap of 0. Keep the examples consistent with this when editing either page.
+- Standings and Photos are external links (a public Google Drive folder and a Google Photos album), not pages. The league adds each week's standings sheet to the Drive folder, so standings never need a site edit. The rules page links to a Drive file of entering averages.
 - `docs/champions.md` lists winners newest first, with a `## <year> - <team>` heading followed by the roster.
+
+### Each season, update
+
+- `docs/schedule.md`: dates, off weeks and position nights.
+- `docs/index.md`: season dates.
+- `docs/rules.md`: the "Season length" line, and the averages link if a new file is uploaded.
+- `docs/champions.md`: the new champion at the top.
+- If the night, time or alley changes, also update `share-description` in `_config.yml`.
