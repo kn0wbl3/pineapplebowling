@@ -5,10 +5,26 @@ plugins:
 title: Pineapple League
 author: Pineapple League
 title-on-all-pages: true
+url: "https://pineapplebowling.com"
 site-css:
   - "/assets/css/side-images.css"
+site-js:
+  - "/assets/js/external-links.js"
 
 navbar-links:
+  Schedule: "schedule"
+  Standings: "https://drive.google.com/drive/folders/1-kuvVEXIs7BGdYEYjny1ldmAkikiNCwA"
   Champions: "champions"
   Rules: "rules"
   Photos: "https://photos.app.goo.gl/Rqi1C8HQAum8Nrei8"
+
+# Applied to every page: favicon, and the image and text shown when a
+# link to the site is shared in a text or chat.
+defaults:
+  - scope:
+      path: ""
+    values:
+      head-extra:
+        - favicon.html
+      share-img: "/assets/img/bowling-lane.jpg"
+      share-description: "Wednesday night bowling at Bowlero White Plains, 6:30 PM."
