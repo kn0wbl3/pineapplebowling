@@ -12,7 +12,7 @@ Will Gazzetta, Barrett Gumina, Angie Ryan, Mike Rodgers
 ## 2024 - The Bowling Bandits
 Will Gazzetta, Barrett Gumina, Angie Ryan, Brian Smith
 
-## 2023 - The Stikers
+## 2023 - The Strikers
 Kevin Lange, Vinny Crowe, Rich Reda, Brian Reda
 
 ## 2022 - Lisa's Boys

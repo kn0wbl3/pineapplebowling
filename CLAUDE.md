@@ -14,7 +14,14 @@ Website for the Pineapple League, a bowling league. It is a Jekyll site built an
 
 ## Commands
 
-There is no lint or test tooling. Jekyll and Ruby are not installed in the dev environment, and neither is `gh`, so PRs are opened from the GitHub website. The theme's HTML includes a `Beautiful Jekyll <version>` comment, and page text can be checked with `curl` to confirm what is live.
+There is no lint or test tooling. Jekyll and Ruby are not installed in the dev environment, and neither is `gh`, so PRs are opened from the GitHub website. Do not try to build or serve the site locally.
+
+- Check a change on the Netlify deploy preview for its PR. Previews are built only for PRs.
+- After merging, confirm what is live with `curl -s https://pineapplebowling.com/<page>`. The theme's HTML includes a `Beautiful Jekyll <version>` comment.
+
+## Branch workflow
+
+Do not commit to `main` directly. Branch from `main`, push the branch, and open a PR so Netlify builds a preview. Merging the PR into `main` deploys the site.
 
 ## Netlify PR previews
 
@@ -31,9 +38,7 @@ There is no lint or test tooling. Jekyll and Ruby are not installed in the dev e
 - `docs/assets/css/side-images.css` shows the two photos in `docs/assets/img/` in the page margins on screens at least 1200px wide. To swap a photo, replace the file and keep its filename.
 - Callouts use the theme's box classes with Markdown enabled inside: `<div class="box-warning" markdown="1">`.
 - `docs/champions.md` lists winners newest first, with a `## <year> - <team>` heading followed by the roster.
-- `docs/layouts/default.html` is unused and left over from before the theme. Jekyll only reads layouts from `_layouts/`.
 
 ## TODO
 
 - Tick "Enforce HTTPS" in the Pages settings once GitHub issues the certificate for `pineapplebowling.com` (as of 2026-11-10, HTTP works but HTTPS still serves the `*.github.io` certificate).
-- Finish Netlify setup: connect the repo in Netlify and confirm the first deploy preview builds.
