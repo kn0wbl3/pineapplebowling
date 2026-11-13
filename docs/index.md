@@ -13,6 +13,7 @@ A Wednesday night handicap bowling league, open to every skill level.
 
 ## League Info
 
+* [Standings](https://drive.google.com/drive/folders/1-kuvVEXIs7BGdYEYjny1ldmAkikiNCwA): weekly standings sheets
 * [Rules](rules): league format, averages, and scoring
 * [How handicap works](handicap): what your handicap is and how it's calculated
 * [Hall of Champions](champions): every past winner
